@@ -6,3 +6,4 @@ node_modules/
 
 # Exclude package-lock.json file
 package-lock.json/
+data.json
