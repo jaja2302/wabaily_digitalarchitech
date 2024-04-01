@@ -1,0 +1,234 @@
+[
+  {
+    "id": 2,
+    "datetime": "09:00:00",
+    "estate": "BDE",
+    "wilayah": "Wilayah_7",
+    "group_id": "120363166668733371@g.us",
+    "group_test": "120363204285862734@g.us"
+  },
+  {
+    "id": 3,
+    "datetime": "11:00:00",
+    "estate": "NKE",
+    "wilayah": "Wilayah_4",
+    "group_id": "120363217152686034@g.us",
+    "group_test": "120363204285862734@g.us"
+  },
+  {
+    "id": 4,
+    "datetime": "12:00:00",
+    "estate": "KTE",
+    "wilayah": "Wilayah_7",
+    "group_id": "120363170524329595@g.us",
+    "group_test": "120363204285862734@g.us"
+  },
+  {
+    "id": 5,
+    "datetime": "12:01:00",
+    "estate": "SPE",
+    "wilayah": "Wilayah_4",
+    "group_id": "120363220419839708@g.us",
+    "group_test": "120363204285862734@g.us"
+  },
+  {
+    "id": 6,
+    "datetime": "12:02:00",
+    "estate": "LME1",
+    "wilayah": "Plasma",
+    "group_id": "120363208984887370@g.us",
+    "group_test": "120363204285862734@g.us"
+  },
+  {
+    "id": 7,
+    "datetime": "12:03:00",
+    "estate": "PDE",
+    "wilayah": "Wilayah_4",
+    "group_id": "120363217291038671@g.us",
+    "group_test": "120363204285862734@g.us"
+  },
+  {
+    "id": 8,
+    "datetime": "12:04:00",
+    "estate": "SBE",
+    "wilayah": "Wilayah_5",
+    "group_id": "120363220146576654@g.us",
+    "group_test": "120363204285862734@g.us"
+  },
+  {
+    "id": 9,
+    "datetime": "12:05:00",
+    "estate": "BTE",
+    "wilayah": "Wilayah_5",
+    "group_id": "120363226513991710@g.us",
+    "group_test": "120363204285862734@g.us"
+  },
+  {
+    "id": 10,
+    "datetime": "12:06:00",
+    "estate": "MLE",
+    "wilayah": "Wilayah_6",
+    "group_id": "120363213054175770@g.us",
+    "group_test": "120363204285862734@g.us"
+  },
+  {
+    "id": 11,
+    "datetime": "12:07:00",
+    "estate": "MRE",
+    "wilayah": "Wilayah_4",
+    "group_id": "120363217205685424@g.us",
+    "group_test": "120363204285862734@g.us"
+  },
+  {
+    "id": 12,
+    "datetime": "12:08:00",
+    "estate": "LME2",
+    "wilayah": "Plasma",
+    "group_id": "120363193243380343@g.us",
+    "group_test": "120363204285862734@g.us"
+  },
+  {
+    "id": 13,
+    "datetime": "10:00:00",
+    "estate": "NNE",
+    "wilayah": "Wilayah_5",
+    "group_id": "120363231670115838@g.us",
+    "group_test": "120363204285862734@g.us"
+  },
+  {
+    "id": 14,
+    "datetime": "15:00:00",
+    "estate": "BHE",
+    "wilayah": "Wilayah_8",
+    "group_id": "120363149785590346@g.us",
+    "group_test": "120363204285862734@g.us"
+  },
+  {
+    "id": 15,
+    "datetime": "15:01:00",
+    "estate": "SJE",
+    "wilayah": "Inti",
+    "group_id": "120363207525577365@g.us",
+    "group_test": "120363204285862734@g.us"
+  },
+  {
+    "id": 16,
+    "datetime": "15:02:00",
+    "estate": "KTE4",
+    "wilayah": "Inti",
+    "group_id": "120363210871038595@g.us",
+    "group_test": "120363204285862734@g.us"
+  },
+  {
+    "id": 17,
+    "datetime": "14:00:00",
+    "estate": "SCE",
+    "wilayah": "Wilayah_6",
+    "group_id": "120363232871713646@g.us",
+    "group_test": "120363204285862734@g.us"
+  },
+  {
+    "id": 18,
+    "datetime": "14:01:00",
+    "estate": "TBE",
+    "wilayah": "Inti",
+    "group_id": "120363193125275627@g.us",
+    "group_test": "120363204285862734@g.us"
+  },
+  {
+    "id": 19,
+    "datetime": "16:00:00",
+    "estate": "RDE",
+    "wilayah": "Wilayah_1",
+    "group_id": "120363025737216061@g.us",
+    "group_test": "120363204285862734@g.us"
+  },
+  {
+    "id": 20,
+    "datetime": "16:01:00",
+    "estate": "SLE",
+    "wilayah": "Wilayah_1",
+    "group_id": "120363025737216061@g.us",
+    "group_test": "120363204285862734@g.us"
+  },
+  {
+    "id": 21,
+    "datetime": "16:02:00",
+    "estate": "KNE",
+    "wilayah": "Wilayah_1",
+    "group_id": "120363025737216061@g.us",
+    "group_test": "120363204285862734@g.us"
+  },
+  {
+    "id": 22,
+    "datetime": "16:03:00",
+    "estate": "PLE",
+    "wilayah": "Wilayah_1",
+    "group_id": "120363025737216061@g.us",
+    "group_test": "120363204285862734@g.us"
+  },
+  {
+    "id": 27,
+    "datetime": "16:04:00",
+    "estate": "SGE",
+    "wilayah": "Wilayah_2",
+    "group_id": "120363047670143778@g.us",
+    "group_test": "120363204285862734@g.us"
+  },
+  {
+    "id": 28,
+    "datetime": "16:05:00",
+    "estate": "RGE",
+    "wilayah": "Wilayah_2",
+    "group_id": "120363047670143778@g.us",
+    "group_test": "120363204285862734@g.us"
+  },
+  {
+    "id": 29,
+    "datetime": "16:06:00",
+    "estate": "KDE",
+    "wilayah": "Wilayah_2",
+    "group_id": "120363047670143778@g.us",
+    "group_test": "120363204285862734@g.us"
+  },
+  {
+    "id": 30,
+    "datetime": "16:07:00",
+    "estate": "BTE",
+    "wilayah": "Wilayah_2",
+    "group_id": "120363047670143778@g.us",
+    "group_test": "120363204285862734@g.us"
+  },
+  {
+    "id": 31,
+    "datetime": "16:08:00",
+    "estate": "NBE",
+    "wilayah": "Wilayah_3",
+    "group_id": "120363048442215265@g.us",
+    "group_test": "120363204285862734@g.us"
+  },
+  {
+    "id": 32,
+    "datetime": "16:09:00",
+    "estate": "SYE",
+    "wilayah": "Wilayah_3",
+    "group_id": "120363048442215265@g.us",
+    "group_test": "120363204285862734@g.us"
+  },
+  {
+    "id": 33,
+    "datetime": "16:10:00",
+    "estate": "BGE",
+    "wilayah": "Wilayah_3",
+    "group_id": "120363048442215265@g.us",
+    "group_test": "120363204285862734@g.us"
+  },
+  {
+    "id": 34,
+    "datetime": "16:11:00",
+    "estate": "UPE",
+    "wilayah": "Wilayah_3",
+    "group_id": "120363048442215265@g.us",
+    "group_test": "120363204285862734@g.us"
+  }
+]

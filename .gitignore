@@ -1,0 +1,8 @@
+# Exclude Baileys authentication info
+baileys_auth_info/
+
+# Exclude Node.js modules
+node_modules/
+
+# Exclude package-lock.json file
+package-lock.json/
