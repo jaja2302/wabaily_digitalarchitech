@@ -234,13 +234,19 @@ async function Generatedmapsest(estate, datetime) {
             formData.append('estate', estate);
             formData.append('datetime', datetime);
 
+            // const response = await axios.post('http://localhost:3000/api/run', formData, {
+            //     headers: {
+            //         'Content-Type': 'application/x-www-form-urlencoded' // Set the proper content type for form data
+            //     }
+            // });
             const response = await axios.post('https://digi-kappa-lac.vercel.app/api/run', formData, {
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded' // Set the proper content type for form data
                 }
             });
 
-            console.log('Response data:', response.data); // Access the response data
+
+            // console.log('Response data:', response.data); // Access the response data
             await sock.sendMessage(idgroup, { text: `Map ${estate} berhasil di generate` });
             return response.data;
         } catch (error) {
@@ -357,6 +363,7 @@ async function sendtaksasiest(est) {
         // await Generatedmapsest(est);
         await checkAndDeleteFiles(); 
         await Generatedmapsest(est,datetimeValue)
+        // console.log();
         await GenDefaultTaksasi(est)
         // testing 
         if (folder === 'Wilayah_1') {
@@ -721,12 +728,12 @@ async function connectToWhatsApp() {
             }
         } else if (connection === 'open') {
             // console.log('opened connection');
-            let getGroups = await sock.groupFetchAllParticipating();
-            let groups = Object.values(await sock.groupFetchAllParticipating())
-            //console.log(groups);
-            for (let group of groups) {
-                console.log("id_group: " + group.id + " || Nama Group: " + group.subject);
-            }
+            // let getGroups = await sock.groupFetchAllParticipating();
+            // let groups = Object.values(await sock.groupFetchAllParticipating())
+            // //console.log(groups);
+            // for (let group of groups) {
+            //     console.log("id_group: " + group.id + " || Nama Group: " + group.subject);
+            // }
             return;
         }
         if (update.qr) {
@@ -748,8 +755,10 @@ async function connectToWhatsApp() {
         for (const message of messages) {
             if (!message.key.fromMe) {
                 const text = message.message.conversation;
+                if (!text) continue; // Skip processing if conversation text is null or empty
                 const noWa = message.key.remoteJid;
                 const lowerCaseMessage = text.toLowerCase();
+
 
                 if (lowerCaseMessage === "!tarik") {
                     await sock.sendMessage(noWa, { text: "Masukan Estate Harus Huruf Besar ?\n Contoh : KNE \n _Perhatian Satu Perintah Untuk Per Estate_" }, { quoted: message });
@@ -1399,7 +1408,7 @@ tasks.forEach(task => {
          const cronTime = `${minutes} ${hours} * * *`;
         cron.schedule(cronTime, async () => {
             console.log(`Sending files at ${cronTime} (WIB)...`);
-            await sock.sendMessage(idgroup, { text: `Cronjob ${cronTime}`})
+            // await sock.sendMessage(idgroup, { text: `Cronjob ${cronTime}`})
             try {
                 await sock.sendMessage(idgroup, { text: `Check Cronjob Fail Tidak Terkirim Sebelumnya`})
                 await sendfailcronjob();
@@ -1442,9 +1451,9 @@ async function sendfailcronjob() {
 
         for (const task of data) {
             try {
-                await sock.sendMessage(task.group_test, { text: `Cronjob ${task.estate}`});
+                await sock.sendMessage(task.group_id, { text: `Cronjob ${task.estate}`});
                 await checkAndDeleteFiles(); 
-                await Generatedmapsest(task.estate, task.datetime);
+                await Generatedmapsest(task.estate, datetimeValue);
                 await GenDefaultTaksasi(task.estate);
                 await sendPdfToGroups(task.wilayah, task.group_id);
                 await sendhistorycron(task.estate);
