@@ -481,6 +481,17 @@ async function sendtaksasiest(est) {
 }
 
 // end taksasi func 
+function formatPhoneNumber(phoneNumber) {
+    if (phoneNumber.startsWith("08")) {
+        return "628" + phoneNumber.substring(2);
+    } else {
+        return phoneNumber;
+    }
+}
+
+let phoneNumber = "082295204921";
+let formattedNumber = formatPhoneNumber(phoneNumber);
+console.log(formattedNumber);  // Output: 6282295204921
 
 // smartlab func 
 async function sendMessagesBasedOnData() {
@@ -496,8 +507,8 @@ async function sendMessagesBasedOnData() {
 
             // Assuming this is inside a loop or function
         for (const data of numberData) {
-            const numberWA = data.penerima + "@s.whatsapp.net"; // Assuming penerima is the WhatsApp number
-            console.log(data); // Log the WhatsApp number for debugging
+            const numberWA = formatPhoneNumber(data.penerima) + "@s.whatsapp.net"; // Assuming penerima is the WhatsApp number
+            console.log(numberWA); // Log the WhatsApp number for debugging
 
             if (isConnected) {
                 
@@ -553,7 +564,7 @@ async function deletemsg(idmsg) {
 }
 
 // 5 menit sekali 
-cron.schedule('*/5 * * * *', async () => {
+cron.schedule('*/1 * * * *', async () => {
     await sendMessagesBasedOnData();
 }, {
     scheduled: true,
@@ -771,8 +782,8 @@ async function connectToWhatsApp() {
                     }
                 
                     // Set a timer for 5 seconds
-                    const timer = setTimeout(handleTimeout, 5000);
-                
+                    const timer = setTimeout(handleTimeout, 60000); // 60 seconds (1 minute) in milliseconds
+
                     async function handleResponse({ messages: responseMessages }) {
                         for (const responseMessage of responseMessages) {
                             if (!responseMessage.key.fromMe && responseMessage.key.remoteJid === noWa) {
@@ -1451,7 +1462,7 @@ async function sendfailcronjob() {
 
         for (const task of data) {
             try {
-                await sock.sendMessage(task.group_id, { text: `Cronjob ${task.estate}`});
+                // await sock.sendMessage(task.group_id, { text: `Cronjob ${task.estate}`});
                 await checkAndDeleteFiles(); 
                 await Generatedmapsest(task.estate, datetimeValue);
                 await GenDefaultTaksasi(task.estate);
